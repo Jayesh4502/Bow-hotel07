@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a luxurious stay at Bow Hotels Ltd. Enjoy top-notch amenities and room options at Hotel 1.">
+    <title>Bow Hotel Downtown </title>
+    <link rel="stylesheet" href="booking.css">
+    <script src="smooth-scroll.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Bow Hotel Downtown</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hotel1.html">Bow Hotel Downtown</a></li>
+                    <li><a href="hotel2.html">Bow Resort & Spa</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   
+
+    
+    <section class="booking-form" id="book-room">
+        <div class="container">
+            <h2>Make a Reservation</h2>
+            <form action="" method="POST">
+             
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="check-in">Check-In Date</label>
+                    <input type="date" id="check-in" name="check_in" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="check-out">Check-Out Date</label>
+                    <input type="date" id="check-out" name="check_out" required>
+                </div>
+
+             
+                <div class="form-group">
+                    <label for="room">Select Room Type</label>
+                    <select id="room" name="room">
+                        <option value="deluxe">Deluxe Room - $150/night</option>
+                        <option value="suite">Executive Suite - $300/night</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="requests">Special Requests (Optional)</label>
+                    <textarea id="requests" name="requests" placeholder="E.g., sea view, late check-in, dietary requirements"></textarea>
+                </div>
+
+               <button type="submit" class="btn-primary">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bow Hotel Downtown. All rights reserved.</p>
+            <p>Contact us: info@bowhotels.com | +1523 458 7541</p>
+        </div>
+    </footer>
+
+</body>
+</html>

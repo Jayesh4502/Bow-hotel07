@@ -1,0 +1,365 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #161717;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+header {
+    background-color: #e2d5d5;
+    padding: 20px 0;
+    box-shadow: 0px 2px 10px #e2d5d5;
+    color: black;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    padding: 10px 20px;
+    color: #333;
+}
+
+nav ul li a:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.hero {
+    background-image: url('Bow\ resort.jpg'); 
+    background-size: cover;      
+    background-position: center;  
+    background-repeat: no-repeat;
+    height: 85vh;
+    color: #fff;                
+    padding: 100px 20px;          
+    position: relative;          
+    text-align: center;          
+}
+
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    text-align: center;
+    margin-block-start: 0.83em;
+    color:#555;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    background-color: #00e64d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: ;
+}
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: #005bb5;
+}
+
+
+.room-grid, .spa-grid, .dining-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+.room-card, .spa-card, .dining-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 280px;
+}
+
+.room-card img, .spa-card img, .dining-card img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: auto;
+}
+
+.room-card h3, .spa-card h3, .dining-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.room-card p, .spa-card p, .dining-card p {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.room-card .price, .spa-card .spa-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+
+.room-description {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin: 15px 0;
+    font-size: 1.1em;
+    color: #444; 
+    font-weight: 500;
+}
+
+.room-description p {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #414243; 
+}
+
+
+.room-amenities {
+    list-style: none; 
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.room-amenities li {
+    padding: 8px 15px;
+    background-color: #0073e6; 
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.spa-services {
+    padding: 60px 20px;
+    position: relative;
+    background-image: url('spa\ bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; 
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+
+.spa-services, .dining-options {
+    padding: 40px 20px;
+    background-color: #f7f7f7; 
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+
+.spa-services h2, .dining-options h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #161616;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.spa-grid, .dining-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.spa-card, .dining-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spa-card:hover, .dining-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.spa-card h3, .dining-card h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+.spa-card p, .dining-card p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.spa-price {
+    font-size: 1.2em;
+    color: #0073e6;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.dining-options p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #b9be22;
+    margin: 10px 0 20px;
+}
+
+.dining-options {
+    padding: 60px 20px;
+    position: relative;
+    background-image: url('dining.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #112c7f; 
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+
+.dining-options::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.dining-options .container {
+    position: relative;
+    z-index: 2; 
+}
+
+
+.dining-options h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffeb99; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.dining-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+
+.dining-card {
+    background: rgba(255, 255, 255, 0.85); 
+    color: #333; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1
+}
+
+
+footer p {
+    margin: 5px 0;
+}

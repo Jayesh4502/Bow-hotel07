@@ -1,0 +1,318 @@
+/* General CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #e2d5d5;
+    padding: 20px 0;
+    box-shadow: 0px 2px 10px #e2d5d5;
+    color: black;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    padding: 10px 20px;
+    color: #333;
+}
+
+nav ul li a:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('bow hotel.jpg'); /* Replace with your image path */
+    background-size: cover;       /* Ensures the image covers the entire section */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;
+    color: #fff;                  /* White text for contrast */
+    padding: 100px 20px;          /* Adjust padding for better spacing */
+    position: relative;           /* Necessary for overlay effect */
+    text-align: center;           /* Center-align text */
+}
+
+/* Overlay effect */
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+/* Ensuring content appears above the overlay */
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00e60c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #005bb5;
+}
+
+
+.hotel-features {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.hotel-features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feature img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+
+.room-options {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.room-options h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.room-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.room-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.room-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.room-card h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+
+.room-card p {
+    color: #666;
+    font-size: 1em;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.room-description {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin: 15px 0;
+    font-size: 1.1em;
+    color: #444; 
+    font-weight: 500;
+}
+
+/* Room Description Text */
+.room-description p {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #0073e6;
+}
+
+
+.room-amenities {
+    list-style: none; 
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.room-amenities li {
+    padding: 8px 15px;
+    background-color: #0073e6; 
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+
+.room-card .price {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+
+.hero {
+    background: url('bow hotel 1.jpg') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(231, 225, 225);
+}
+
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color:rgb(218, 214, 214);
+}
+
+.hero .btn-primary {
+    padding: 12px 30px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    background-color: #005bb5;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bow Resort and Spa</title>
+    <link rel="stylesheet" href="booking.css">
+    <script src="smooth-scroll.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bow Resort and Spa </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hotel1.html">Bow Hotel Downtown</a></li>
+                    <li><a href="hotel2.html">Bow Resort & Spa</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="About.html">About us</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="booking-form-section">
+        <div class="container">
+            <h2>Make a Reservation</h2>
+            <form action="" method="post" class="booking-form">
+              
+                <div class="form-group">
+                    <label for="room-type">Select Room Type</label>
+                    <select id="room-type" name="room-type" required>
+                        <option value="Deluxe Room">Deluxe Room - $150 per night</option>
+                        <option value="Suite">Suite - $300 per night</option>
+                    </select>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="check-in">Check-in Date</label>
+                    <input type="date" id="check-in" name="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Check-out Date</label>
+                    <input type="date" id="check-out" name="check-out" required>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="guests" required>
+                           
+                            <script>
+                                for (let i = 1; i <= 20; i++) {
+                                    document.write(`<option value="${i}">${i} Guest${i > 1 ? 's' : ''}</option>`);
+                                }
+                            </script>
+                        </select>
+                        
+                    </select>
+                </div>
+
+                <h3>Your Details</h3>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+               
+                <button type="submit" class="btn-primary">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bow Resort and Spa. All rights reserved.</p>
+            <p>Contact us: info@bowresort.com | +123 456 7890</p>
+        </div>
+    </footer>
+
+</body>
+</html>
