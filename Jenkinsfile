@@ -1,38 +1,103 @@
 pipeline {
+
     agent any
+ 
+    environment {
 
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/Jayesh4502/Bow-hotel07.git'
-            }
-        }
+        APP_DIR = "healthcare-app"
 
-        stage('Build') {
-            steps {
-                echo 'Building the application...'
-                // Add your build commands here
-                // For example, if using npm:
-                // sh 'npm install'
-            }
-        }
+        APP_PORT = "3000"
 
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-                // Add your test commands here
-                // For example:
-                // sh 'npm test'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the application...'
-                // Add your deployment commands here
-                // For example, copying files to the web server directory:
-                // sh 'scp -r * user@yourserver:/var/www/html/'
-            }
-        }
     }
+ 
+    stages {
+
+        stage('Clone Repository') {
+
+            steps {
+
+                script {
+
+                    echo "📥 Cloning the GitHub Repository..."
+
+                    git branch: 'main', url: 'https://github.com/Jayesh4502/Bow-hotel07.git'
+
+                }
+
+            }
+
+        }
+ 
+        stage('Install Dependencies') {
+
+            steps {
+
+                script {
+
+                    echo "📦 Installing Application Dependencies..."
+
+                    sh '''
+
+                        cd ${APP_DIR}
+
+                        if [ -f package.json ]; then
+
+                            npm install
+
+                        else
+
+                            echo "⚠️ No package.json found. Skipping npm install."
+
+                        fi
+
+                    '''
+
+                }
+
+            }
+
+        }
+ 
+        stage('Start Application') {
+
+            steps {
+
+                script {
+
+                    echo "🚀 Starting the Application..."
+
+                    sh '''
+
+                        cd ${APP_DIR}
+
+                        nohup npm start --port=${APP_PORT} &
+
+                    '''
+
+                }
+
+            }
+
+        }
+
+    }
+ 
+    post {
+
+        success {
+
+            echo "✅ Application deployed successfully at: http://<your-ec2-ip>:${APP_PORT}"
+
+        }
+
+        failure {
+
+            echo "❌ Deployment failed. Please check the Jenkins logs for details."
+
+        }
+
+    }
+
 }
+
+ 
